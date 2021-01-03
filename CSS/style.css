@@ -5,11 +5,14 @@
 
 body {
   margin: 0;
+
+
+  
 }
 
 a {
   text-decoration: none;
-  color: #377e9a;
+  color: #4f8fe4;
 }
 
 .container {
@@ -43,7 +46,7 @@ a {
 }
 
 .logo__highlight {
-  color: #377e9a;
+  color: #4f8fe4;
 }
 
 .navbar {
@@ -63,7 +66,7 @@ a {
 .navbar__item::after {
   content: "";  
   width: 0;
-  border-bottom: 3px solid #377e9a;
+  border-bottom: 3px solid #4f8fe4;
   margin: auto;
   margin-top: 4px;
   display: block;
@@ -113,7 +116,7 @@ a {
 
 .page__header {
   padding: 32px 64px;
-  background-color: #377e9a;
+  background-color: #4f8fe4;
   color: white;
   background-image: url(/image/bg.png);
   background-size: cover;
@@ -133,6 +136,15 @@ a {
   background-color: white;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
+}
+
+#logoicon {
+  height: 35px;
+  width: 35px;
+  position: relative;
+  top:4px;
+  left:7px;
+  opacity:0.8;
 }
 
 .homepage__header {
@@ -204,6 +216,10 @@ a {
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
+
+#linkedin:hover, #git:hover {
+  cursor:pointer; /*鼠标改为小手指*/
+}
 #git {
   color: black;
   transition-property: transform, box-shadow;
@@ -238,7 +254,7 @@ a {
 }
 
 .homepage__aboutMeHeaderHighlight {
-  color: #377e9a;
+  color: #4f8fe4;
 }
 
 .homepage__aboutMeContent {
@@ -264,13 +280,14 @@ a {
 }
 
 .footer {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(172, 169, 169, 0.5);
   text-align: center;
   margin: 8px 0;
 }
 
 .resumeSub__title {
   margin-top: 0;
+  font-size: 2rem;
 }
 
 .timelines {
@@ -288,14 +305,18 @@ a {
   padding: 16px 20px;
   border-radius: 4px;
   box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);
-  border-left: 2px solid #377e98;
+  border-left: 2px solid #4f8fe4;
   margin-left: -5px;
+
+  transition-property: transform, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 .timeline::before {
   content: "";
   width: 48px;
-  border-bottom: 2px solid #377e98;
+  border-bottom: 2px solid #4f8fe4;
   position: absolute;
   left: -48px;
   top: 8px;
@@ -308,9 +329,14 @@ a {
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  border: 2px solid #377e98;
+  border: 2px solid #4f8fe4;
   top: 2px;
   background: white;
+}
+
+.timeline:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 24px rgba(0, 0, 0, 0.15);
 }
 
 .experience__title {
@@ -323,7 +349,7 @@ a {
 }
 
 .experience__year {
-  color: #377e98;
+  color: #4f8fe4;
 }
 
 .experience__divider {
@@ -343,11 +369,25 @@ a {
 }
 
 .resumeSub__titleHighlight {
-  color: #377e98;
+  color: black;
 }
+
+.skill__bar {
+  /* position: relative; */
+  height: 16px;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.skill__bar--70, .skill__bar--75, .skill__bar--80, .skill__bar--85{
+  width: 0%;
+  height: 16px;
+  background-color:#4f8fe4;
+}
+
 
 .skill {
   margin: 16px 0;
+  
 }
 
 .skill__title {
@@ -367,10 +407,10 @@ a {
   left: 0;
   top: 0;
   bottom: 0;
-  background-color: #377e98;
+  background-color: #4f8fe4;
 }
 
-.skill__level--webDesign:after {
+/* .skill__level--webDesign:after {
   width: 75%;
 }
 
@@ -378,9 +418,9 @@ a {
   width: 80%;
 }
 
-/* .skill__level--printDesign:after {
+.skill__level--printDesign:after {
   width: 75%;
-} */
+}
 
 .skill__level--htmlDesign:after {
   width: 85%;
@@ -400,10 +440,11 @@ a {
 
 .skill__level--javaDesign:after{
   width: 70%;
-}
+} */
 
 .services__titleHightLight {
-  color: #377e9a;
+  color: #4f8fe4;
+  font-size: 2rem;
 }
 
 .services {

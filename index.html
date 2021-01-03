@@ -7,7 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
   <link rel="stylesheet" href="CSS/style.css">
+  <link rel="shortcut icon" href="image/logo.ico" type="image/x-icon"/>    <!--浏览器标签logo-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  <script src="JS/click.js"></script>
 </head>
 <body>
   <div class="main">
@@ -15,15 +17,16 @@
       <header class="nav">
         <div class="nav__left">
           <div class="logo">
-            <!-- <span class="logo__highlight">Dongyu Wu</span> -->
-            Curriculum Vitae
+            <img id="logoicon" src="image/logo.png"/>
+            <span class="logo__highlight">Curriculum Vitae</span>
+
           </div>
         </div>
         <div class="nav__right">
           <div class="navbar">
             <a class="navbar__item" href="HOME">Home</a>
-            <a class="navbar__item" href="RESUME">Resume</a>
-            <a class="navbar__item" href="SERVICES">Services</a>
+            <a class="navbar__item" href="RESUME" >Resume</a>
+            <a class="navbar__item" href="SKILL">Skills</a>
             <a class="navbar__item" href="BLOG">Blog</a>
             <a class="navbar__item" href="CONTACT">Contact</a>
           </div>
@@ -47,8 +50,8 @@
           <div class="page__content homepage__content">
             <div>
               <h3 class="homepage__aboutMeHeader">
-                About
-                <span class="homepage__aboutMeHeaderHighlight">Me</span>
+                <!-- About -->
+                <span class="homepage__aboutMeHeaderHighlight">About Me</span>
               </h3>
               <div class="homepage__aboutMeContent">
                 Hi, my name is Dongyu Wu. I come from China and I am currently working on the Master of Information Technology at the University of Queensland.
@@ -85,7 +88,7 @@
           </div>
         </div>
 
-        <div id="RESUME" class="page">
+        <div id="RESUME" class="page" >
           <div class="page__header">
             <h2 class="page__title">RESUME</h2>
           </div>
@@ -105,6 +108,14 @@
                     </div>
                     <div class="experience__description">
                       <!-- Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor. -->
+                      <ul>
+                        <li>
+                          Sem1 GPA 6/7
+                        </li>
+                        <li>
+                          Sem2 GPA 5/7
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <div class="timeline">
@@ -143,6 +154,7 @@
                         <li>
                           Statistics of the location and type of failure are made into a form and submitted everyday.
                         </li>
+                      </ul>
                     </div>
                   </div>
                    
@@ -154,53 +166,75 @@
                 <h3 class="resumeSub__title">Design <span class="resumeSub__titleHighlight">Skills</span></h3>
                 <div class="skill">
                   <h4 class="skill__title">Web Design</h4>
-                  <div class="skill__level skill__level--webDesign"></div>
+                  <div class = "skill__bar">
+                    <div id='web75' class='skill__bar--75'></div>
+                  </div>
+                  <!-- <div id="75" class="skill__level skill__level--webDesign"></div> -->
                 </div>
                 <div class="skill">
                   <h4 class="skill__title">Graphic Design</h4>
-                  <div class="skill__level skill__level--graphicDesign"></div>
+                  <div class = "skill__bar">
+                    <div id='graphic80' class='skill__bar--80'></div>
+                  </div>
+                  <!-- <div class="skill__level skill__level--graphicDesign"></div> -->
                 </div>
-                <!-- <div class="skill">
+
+                <!-- <div class="bar">
                   <h4 class="skill__title">Print Design</h4>
-                  <div class="skill__level skill__level--printDesign"></div>
+                  <div id='85' class="baritem"></div>
                 </div> -->
               </div>
               <div>
                 <h3 class="resumeSub__title">Coding <span class="resumeSub__titleHighlight">Skills</span></h3>
                 <div class="skill">
                   <h4 class="skill__title">HTML</h4>
-                  <div class="skill__level skill__level--htmlDesign"></div>
+                  <div class = "skill__bar">
+                    <div id='html85' class='skill__bar--85'></div>
+                  </div>
+                  <!-- <div class="skill__level skill__level--htmlDesign"></div> -->
                 </div>
                 <div class="skill">
                   <h4 class="skill__title">CSS</h4>
-                  <div class="skill__level skill__level--cssDesign"></div>
+                  <div class = "skill__bar">
+                    <div id='css80' class='skill__bar--80'></div>
+                  </div>
+                  <!-- <div class="skill__level skill__level--cssDesign"></div> -->
                 </div>
                 <div class="skill">
                   <h4 class="skill__title">JavaScript</h4>
-                  <div class="skill__level skill__level--jsDesign"></div>
+                  <div class = "skill__bar">
+                    <div id='js70' class='skill__bar--70'></div>
+                  </div>
+                  <!-- <div class="skill__level skill__level--jsDesign"></div> -->
                 </div>
                 <div class="skill">
                   <h4 class="skill__title">Python</h4>
-                  <div class="skill__level skill__level--pythonDesign"></div>
+                  <div class = "skill__bar">
+                    <div id='py80' class='skill__bar--80'></div>
+                  </div>
+                  <!-- <div class="skill__level skill__level--pythonDesign"></div> -->
                 </div>
                 <div class="skill">
                   <h4 class="skill__title">Java</h4>
-                  <div class="skill__level skill__level--javaDesign"></div>
+                  <div class = "skill__bar">
+                    <div id='java70' class='skill__bar--70'></div>
+                  </div>
+                  <!-- <div class="skill__level skill__level--javaDesign"></div> -->
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="SERVICES" class="page">
+        <div id="SKILL" class="page">
           <div class="page__header">
-            <h2 class="page__title">Services</h2>
+            <h2 class="page__title">SKILLS</h2>
           </div>
           <div class="page__content">
             <div class="servicesPage__services">
               <h3 class="services__title">
                 <!-- My -->
-                <span class="services__titleHightLight">My Services</span>
+                <span class="services__titleHightLight">Skills List</span>
               </h3>
               <div class="services">
                 <div class="serviceItem">
@@ -226,20 +260,20 @@
                   <h4 class="serviceItem__name">JavaScript</h4>
                   <!-- <div class="serviceItem__description">JavaScript often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.</div> -->
                 </div>
-                
-                <div class="serviceItem">
-                  <div class="serviceItem__imageContainer">
-                    <img alt="JavaScript" src="image/java.png" class="serviceItem__image"></img>
-                  </div>
-                  <h4 class="serviceItem__name">Java</h4>
-                  <!-- <div class="serviceItem__description">JavaScript often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.</div> -->
-                </div>
 
                 <div class="serviceItem">
                   <div class="serviceItem__imageContainer">
                     <img alt="JavaScript" src="image/py.png" class="serviceItem__image"></img>
                   </div>
                   <h4 class="serviceItem__name">Python</h4>
+                  <!-- <div class="serviceItem__description">JavaScript often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.</div> -->
+                </div>
+                
+                <div class="serviceItem">
+                  <div class="serviceItem__imageContainer">
+                    <img alt="JavaScript" src="image/java.png" class="serviceItem__image"></img>
+                  </div>
+                  <h4 class="serviceItem__name">Java</h4>
                   <!-- <div class="serviceItem__description">JavaScript often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.</div> -->
                 </div>
               </div>
@@ -281,8 +315,8 @@
               <div class="info">
                 <div class="infoItem">
                   <div class="infoItem__description">
-                    <h2>Phone:</h2>
-                    <h3>0492364884</h3>
+                    <h2>左侧 谷歌地图 Get in touch</h2>
+                    
 
                   </div>
                   
@@ -290,8 +324,7 @@
 
                 <div class="infoItem">
                   <div class="infoItem__description">
-                    <h2>E-mail:</h2> 
-                    <a href="dongyu.wu97@gmail.com">dongyu.wu97@gmail.com</a>
+                    <h2>右侧假装发邮件样式 Contact Form</h2> 
                   </div>
                   
                 </div>
@@ -314,11 +347,11 @@
       </div>
       
       <footer class="footer">
-        © 2020 All rights reserved. Designed by Jiangren
+        © 2020 All rights reserved. Designed by Jiangren and Dongyu
       </footer>
     </div>
   </div>
   <script src="JS/main.js"></script>
-  <script src="JS/click.js"></script>
+  
 </body>
 </html>
