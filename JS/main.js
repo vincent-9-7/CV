@@ -1,6 +1,6 @@
 function createNav() {
   var previous = '';
-  var current = 'HOME';
+  var current = 'SKILL';
  
 
   changePage();
@@ -56,7 +56,7 @@ function createNav() {
 
       setInterval(frame,10) /*setInterval() 方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭*/      
       function frame() {
-        if (web75 > 75) {
+        if (web75 > 85) {
           if (graphic80 > 80) {
             clearInterval();
           } else {
