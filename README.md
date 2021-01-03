@@ -1,1 +1,3 @@
-Project1-CV
+# Project One - CV
+
+## Designed by Dongyu
