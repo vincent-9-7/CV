@@ -2,5 +2,5 @@
 
 **Designed by Dongyu**
 
-## Ref
+## Reference
 > https://www.svgbackgrounds.com/#pattern-randomized
