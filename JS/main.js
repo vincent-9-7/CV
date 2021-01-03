@@ -1,6 +1,6 @@
 function createNav() {
   var previous = '';
-  var current = 'SKILL';
+  var current = 'HOME';
  
 
   changePage();
