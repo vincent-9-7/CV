@@ -219,7 +219,7 @@ a {
   color:#3b5998;
   transition-property: transform, box-shadow;
   transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; 
 }
 
 #linkedin:hover, #git:hover {
