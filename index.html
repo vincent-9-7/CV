@@ -357,10 +357,35 @@
                 </div>
 
                 <div class="infoItem">
-                  <!-- <div class="infoItem__description"> -->
                     <h2 class='contact__title'>Contact Form</h2> 
-                    <div id='contractForm'></div>
-                  <!-- </div> -->
+                    <div id='contractForm'>
+                      <form action="https://formspree.io/f/xeqpvjpj" method="POST">
+                        <div class='formItem'>
+                          <select name="Categories" required>
+                            <option value="--">Please choose a categories </option>
+                              <option value="opinion">Give an opinion</option>
+                              <option value="job">Job opportunities</option>
+                          </select>
+                        </div>
+                  
+                        <div class='formItem'>
+                             <input name="name" class="input" type="text" placeholder="Full Name.." required/>
+                        </div>
+                  
+                        <div class='formItem'>
+                             <input name="_replyto" class="input" type="email" placeholder="Email Address.."  required/>
+                        </div>
+                  
+                        <div class='formItem'>
+                             <textarea name="message" class="input" placeholder="Message to me.." required></textarea>
+                        </div>
+                          
+                        <div class='formItem'>
+                          <button id='button'>Click to Send</button>
+                        </div>   
+                        </form>
+
+                    </div>
                 </div>
 
                 
