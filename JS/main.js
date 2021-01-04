@@ -1,8 +1,7 @@
 function createNav() {
   var previous = '';
   var current = 'HOME';
- 
-
+  
   changePage();
   changeNavItem();
 
@@ -63,13 +62,14 @@ function createNav() {
             graphic80++;
             element__graphic80.style.width = graphic80 + '%';
           }
-          clearInterval()
+          clearInterval();
         } else {
           web75++;
           element__web75.style.width = web75 + '%';
         }
       }
 
+      // 使用定时器实现每一秒写一次时间 setInterval("loveTime();",1000);
       setInterval(frame2,10) /*setInterval() 方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭*/      
       function frame2() {
         if (html85 > 85) {

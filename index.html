@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="shortcut icon" href="image/logo.ico" type="image/x-icon"/>    <!--浏览器标签logo-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRGfFdpegL2fP1iIK7cozV9pUOwo3ew_M&sensor=&language=en">
+  </script>
   <script src="JS/click.js"></script>
 </head>
 <body>
@@ -27,7 +30,7 @@
             <a class="navbar__item" href="HOME">Home</a>
             <a class="navbar__item" href="RESUME" >Resume</a>
             <a class="navbar__item" href="SKILL">Skills</a>
-            <a class="navbar__item" href="BLOG">Blog</a>
+            <!-- <a class="navbar__item" href="BLOG">Blog</a> -->
             <a class="navbar__item" href="CONTACT">Contact</a>
           </div>
         </div>
@@ -302,7 +305,7 @@
           </div>
         </div>
 
-        <div id="BLOG" class="page">
+        <!-- <div id="BLOG" class="page">
           <div class="page__header">
             <h2 class="page__title">BLOG</h2>
           </div>
@@ -313,7 +316,7 @@
 
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div id="CONTACT" class="page">
           <div class="page__header">
@@ -323,30 +326,47 @@
           <div class="page__content">
             <div class="contactPage__info">
               <div class="info">
+
                 <div class="infoItem">
-                  <div class="infoItem__description">
-                    <h2>左侧 谷歌地图 Get in touch</h2>
+                  <!-- <div class="infoItem__description"> -->
+                    <h2 class='contact__title'>Get in touch</h2>
+                    <div id="googleMap"></div>
                     
+                    <div class = 'info'>
+                      <div class='infoItem'>
+                        <img class='contact__image' src="/image/location.svg">
+                      </div>
+                      <div class="infoItem__description infoItem">
+                        Brisbane, Australia
+                      </div>
+                    </div>
 
-                  </div>
-                  
+                    <div class = 'info'>
+                      <div class='infoItem'>
+                        <img class='contact__image' src="/image/email.svg">
+                      </div>
+                    <div class="infoItem__description infoItem">dongyu.wu97@gmail.com</div>
+                    </div>
+
+                    <div class = 'info'>
+                      <div class='infoItem'>
+                        <img class='contact__image' src="/image/phone.svg">
+                      </div>
+                    <div class="infoItem__description infoItem">+049 236 4884 </div>
+                    </div>
                 </div>
 
                 <div class="infoItem">
-                  <div class="infoItem__description">
-                    <h2>右侧假装发邮件样式 Contact Form</h2> 
-                  </div>
-                  
+                  <!-- <div class="infoItem__description"> -->
+                    <h2 class='contact__title'>Contact Form</h2> 
+                    <div id='contractForm'></div>
+                  <!-- </div> -->
                 </div>
 
-                <div class="infoItem">
-                  <div class="infoItem__description">
-                    <h2>Git:</h2>
-                    <a href="https://github.com/vincent-9-7">https://github.com/vincent-9-7</a>
-                  </div>
-                  
-                </div>
+                
               </div>
+
+              
 
             
 
