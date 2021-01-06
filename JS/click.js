@@ -1,4 +1,5 @@
 google.maps.event.addDomListener(window, 'load', initialize); 
+window.onscroll = function() {onscrolling()}; //blog页面浮动窗口，自动启动
 
 function linkedin() {
     console.log("linkedin");
@@ -79,12 +80,65 @@ function initialize() {
         setTimeout(function () { infowindow.close(); }, 4000); //4秒钟后关闭
     });
 
-  		
-
 
 	// n. 运行地图,可以放在html的<script>里
 	// google.maps.event.addDomListener(window, 'load', initialize);
 }
 
-    
 
+function onscrolling(){
+    var winScroll = document.body.scrollTop || 
+		document.documentElement.scrollTop;
+	var height = document.documentElement.scrollHeight - 
+		document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    
+    //获取对象长度： Object.keys(display_none).length
+    // var display_block = {1:"ss",2:"aa"}
+    
+    if (scrolled < 2) {
+        document.getElementById('page__on-scroll').style.display = 'none';
+        document.getElementById('page__scroll-flash').style.display = 'none';
+    }
+    if (scrolled > 2) {
+        document.getElementById('page__on-scroll').style.display = 'block';
+        document.getElementById('page__on-scroll').innerHTML = 'Rottnest Island';
+    }
+    if (scrolled >10.5) {
+        document.getElementById('page__on-scroll').innerHTML = 'Setting Sun';
+    }
+    if (scrolled > 22) {
+        document.getElementById('page__on-scroll').innerHTML = 'Lighting Huose';
+    }
+    if (scrolled > 47) {
+        document.getElementById('page__on-scroll').innerHTML = 'Rottnest Island';
+    }
+    if (scrolled > 59) {
+        document.getElementById('page__on-scroll').innerHTML = 'Quokka';
+    }
+    if (scrolled > 71) {
+        document.getElementById('page__on-scroll').innerHTML = 'Sea Mew';
+    }
+    if (scrolled > 95) {
+        document.getElementById('page__on-scroll').innerHTML = 'Beach';
+    }
+
+    if (scrolled > 98) {
+        document.getElementById('page__on-scroll-to-top').style.display = 'block'; 
+    }
+    else{
+        document.getElementById('page__on-scroll-to-top').style.display = 'none'; 
+    }
+
+    if (scrolled > 2) {
+        var width = scrolled/100*290
+        document.getElementById('page__scroll-flash').style.display = 'block';
+        document.getElementById('page__scroll-flash').style.width = width+'px';
+    }
+
+    
+}
+
+function tothetop(){
+    window.scrollTo(0,0);
+}
