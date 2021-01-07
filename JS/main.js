@@ -73,7 +73,7 @@ function createNav() {
       setInterval(frame2,10) /*setInterval() 方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭*/      
       function frame2() {
         if (html85 > 85) {
-          if (css80 > 75) {
+          if (css80 > 75) { 
             if (js70 > 85) {
               if (py80 > 80) {
                 if (java70 > 70) {
