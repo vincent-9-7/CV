@@ -47,6 +47,7 @@ a {
   flex: 1;
 }
 
+
 .logo {
   font-size: 2.5rem;
   font-weight: 500;
@@ -95,7 +96,7 @@ a {
 }
 
 .pages {
-  padding: 15px 0;
+  padding: 0px 0;
   position: relative;
   flex: 1;
 }
@@ -589,10 +590,12 @@ a {
   color: white;
   text-align: center;
   cursor:pointer;
+  
 }
 
 #page__on-scroll-to-top:hover {
   opacity:0.7;
+  transition: 0.5s;
 }
 
 .infoItem__description {

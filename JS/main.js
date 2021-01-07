@@ -1,13 +1,11 @@
 function createNav() {
   var previous = '';
-  var current = 'HOME';
+  var current = 'RESUME';
   
   changePage();
   changeNavItem();
 
-  document
-    .querySelectorAll('.navbar__item')
-    .forEach(function(element) {
+  document.querySelectorAll('.navbar__item').forEach(function(element) {
       element.onclick = function(event) {
         event.preventDefault();
 
@@ -107,15 +105,12 @@ function createNav() {
 
     }
 
+    var skillList = ['web75','graphic80','html85','css80','js70','py80','java70']
     if(current == 'RESUME') {
       console.log('resume page');
-      document.getElementById('web75').style.width = '0%';
-      document.getElementById('graphic80').style.width = '0%';
-      document.getElementById('html85').style.width = '0%';
-      document.getElementById('css80').style.width = '0%';
-      document.getElementById('js70').style.width = '0%';
-      document.getElementById('py80').style.width = '0%';
-      document.getElementById('java70').style.width = '0%';
+      for(var i = 0; i < skillList.length; i++) {
+        document.getElementById(skillList[i]).style.width = '0%';
+      }
       progressBar();
     }
   }
