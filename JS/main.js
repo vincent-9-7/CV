@@ -1,6 +1,6 @@
 function createNav() {
   var previous = '';
-  var current = 'HOME';
+  var current = 'BLOG';
   
   changePage();
   changeNavItem();
