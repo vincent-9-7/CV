@@ -121,13 +121,17 @@ function onscrolling(){
     }
     if (scrolled > 95) {
         document.getElementById('page__on-scroll').innerHTML = 'Beach';
+
     }
 
-    if (scrolled > 98) {
+    if (scrolled > 95) {
         document.getElementById('page__on-scroll-to-top').style.display = 'block'; 
+        // $('#page__on-scroll-to-top').animate({opacity:'0.5'},2000);
     }
     else{
+        // $('#page__on-scroll-to-top').animate({opacity:'0'});
         document.getElementById('page__on-scroll-to-top').style.display = 'none'; 
+
     }
 
     if (scrolled > 2) {

@@ -137,6 +137,7 @@ a {
   margin: 0;
   text-align: center;
   font-size: 44px;
+  color: #4f8fe4;
 }
 
 .page__content {
@@ -189,11 +190,13 @@ a {
   margin: 0;  
   font-size: 3rem;
   font-weight: 500;
+  color: #4f8fe4;
 }
 
 .homepage__position {
   font-size: 1.25rem;
   margin-top: 8px;
+  color: #4f8fe4;
 }
 
 .homepage__socialMedias {
@@ -202,7 +205,7 @@ a {
   justify-content: center;
 }
 
-.homepage__socialMediaItem {
+.homepage__socialMediaItem, .linkedin, .linkedin-background, .git, .git-background{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,9 +216,22 @@ a {
   width: 30px;
   height: 30px;
   margin: 0 4px;
-  background-color: white;
+  
   padding: 8px;
   border-radius: 100%;
+}
+
+.linkedin-background {
+  background-color:  #3b5998;
+  opacity: 0;
+}
+.git-background {
+  background-color: black;
+  opacity: 0;
+}
+
+#linkedin:hover, #git:hover, #logoicon:hover {
+  cursor:pointer; /*鼠标改为小手指*/
 }
 
 #linkedin {
@@ -225,9 +241,6 @@ a {
   transition-timing-function: ease-in-out; 
 }
 
-#linkedin:hover, #git:hover, #logoicon:hover {
-  cursor:pointer; /*鼠标改为小手指*/
-}
 #git {
   color: black;
   transition-property: transform, box-shadow;
@@ -392,6 +405,9 @@ a {
   background-color:#4f8fe4;
 }
 
+#skill-list {
+  opacity: 0;
+}
 
 .skill {
   margin: 16px 0;
@@ -401,6 +417,7 @@ a {
 .skill__title {
   margin: 0 0 8px;
   font-size: 0.8rem;
+  opacity: 0;
 }
 
 .skill__level {
@@ -500,6 +517,7 @@ a {
 
 .serviceItem__name {
   font-size: 18px;
+  opacity: 0;
 }
 
 .serviceItem__description {
@@ -574,8 +592,8 @@ a {
 }
 #page__on-scroll-to-top {
   display: none;
+  opacity: 0.5;
   background-color: rgb(58, 183, 255);
-  opacity:0.5;
   width: 120px;
   height:100px;
   /* border: 10px solid #f1f1f1; */

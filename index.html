@@ -4,15 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vincent's CV</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-  <link rel="stylesheet" href="CSS/style.css">
-  <link rel="shortcut icon" href="image/logo.ico" type="image/x-icon"/>    <!--浏览器标签logo-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRGfFdpegL2fP1iIK7cozV9pUOwo3ew_M&sensor=&language=en">
-  </script>
-  <script src="JS/click.js"></script>
+  <link rel="shortcut icon" href="image/logo.ico" type="image/x-icon"/>    <!--浏览器标签logo-->
+
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- 1.jQuery库 2.地图api 3.jQuery渐变色animate插件 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRGfFdpegL2fP1iIK7cozV9pUOwo3ew_M&sensor=&language=en"></script>
+  <script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
+
 </head>
 <body>
   <div class="main">
@@ -26,11 +30,11 @@
         </div>
         <div class="nav__right">
           <div class="navbar">
-            <a class="navbar__item" href="HOME">Home</a>
-            <a class="navbar__item" href="RESUME" >Resume</a>
-            <a class="navbar__item" href="SKILL">Skills</a>
-            <a class="navbar__item" href="BLOG">Blog</a>
-            <a class="navbar__item" href="CONTACT">Contact</a>
+            <a class="navbar__item" id='home-page' href="HOME">Home</a>
+            <a class="navbar__item" id='resume-page' href="RESUME" >Resume</a>
+            <a class="navbar__item" id='skill-page' href="SKILL">Skills</a>
+            <a class="navbar__item" id='blog-page' href="BLOG">Gallery</a>
+            <a class="navbar__item" id='contact-page' href="CONTACT">Contact</a>
           </div>
         </div>
       </header>
@@ -43,9 +47,12 @@
               <h2 class="homepage__name">Dongyu Wu</h2>
               <div class="homepage__position">University of Queensland</div>
               <div class="homepage__socialMedias">
-                <!-- <i class="fab fa-twitter homepage__socialMediaItem"></i> -->
-                <i id="linkedin" class="fab fa-linkedin fa-2x homepage__socialMediaItem" onclick="linkedin()"></i>
-                <i id="git" class="fab fa-github fa-2x homepage__socialMediaItem" onclick="git()"></i>
+                  <div class="linkedin-background">
+                    <i id="linkedin" class="fab fa-linkedin fa-2x homepage__socialMediaItem " onclick="linkedin()"></i>
+                  </div>
+                  <div class="git-background">
+                    <i id="git" class="fab fa-github fa-2x homepage__socialMediaItem" onclick="git()"></i>
+                  </div>
               </div>
             </div>
           </div>
@@ -170,57 +177,53 @@
                 <div class="skill">
                   <h4 class="skill__title">Web Design</h4>
                   <div class = "skill__bar">
-                    <div id='web75' class='skill__bar--75'></div>
+                    <div id='web75' class='bar skill__bar--75'></div>
                   </div>
                   <!-- <div id="75" class="skill__level skill__level--webDesign"></div> -->
                 </div>
                 <div class="skill">
                   <h4 class="skill__title">Graphic Design</h4>
                   <div class = "skill__bar">
-                    <div id='graphic80' class='skill__bar--80'></div>
+                    <div id='graphic80' class='bar skill__bar--80'></div>
                   </div>
                   <!-- <div class="skill__level skill__level--graphicDesign"></div> -->
                 </div>
 
-                <!-- <div class="bar">
-                  <h4 class="skill__title">Print Design</h4>
-                  <div id='85' class="baritem"></div>
-                </div> -->
               </div>
               <div>
                 <h3 class="resumeSub__title">Coding <span class="resumeSub__titleHighlight">Skills</span></h3>
                 <div class="skill">
                   <h4 class="skill__title">HTML</h4>
                   <div class = "skill__bar">
-                    <div id='html85' class='skill__bar--85'></div>
+                    <div id='html85' class='bar skill__bar--85'></div>
                   </div>
                   <!-- <div class="skill__level skill__level--htmlDesign"></div> -->
                 </div>
                 <div class="skill">
                   <h4 class="skill__title">CSS</h4>
                   <div class = "skill__bar">
-                    <div id='css80' class='skill__bar--80'></div>
+                    <div id='css80' class='bar skill__bar--80'></div>
                   </div>
                   <!-- <div class="skill__level skill__level--cssDesign"></div> -->
                 </div>
                 <div class="skill">
                   <h4 class="skill__title">JavaScript</h4>
                   <div class = "skill__bar">
-                    <div id='js70' class='skill__bar--70'></div>
+                    <div id='js70' class='bar skill__bar--70'></div>
                   </div>
                   <!-- <div class="skill__level skill__level--jsDesign"></div> -->
                 </div>
                 <div class="skill">
                   <h4 class="skill__title">Python</h4>
                   <div class = "skill__bar">
-                    <div id='py80' class='skill__bar--80'></div>
+                    <div id='py80' class='bar skill__bar--80'></div>
                   </div>
                   <!-- <div class="skill__level skill__level--pythonDesign"></div> -->
                 </div>
                 <div class="skill">
                   <h4 class="skill__title">Java</h4>
                   <div class = "skill__bar">
-                    <div id='java70' class='skill__bar--70'></div>
+                    <div id='java70' class='bar skill__bar--70'></div>
                   </div>
                   <!-- <div class="skill__level skill__level--javaDesign"></div> -->
                 </div>
@@ -237,14 +240,14 @@
             <div class="servicesPage__services">
               <h3 class="services__title">
                 <!-- My -->
-                <span class="services__titleHightLight">Skills List</span>
+                <span class="services__titleHightLight" id='skill-list'>Skills List</span>
               </h3>
               <div class="services">
                 <div class="serviceItem">
                   <div class="serviceItem__imageContainer">
                     <img alt="HTML5" src="image/html5.png" class="serviceItem__image"></img>
                   </div>
-                  <h4 class="serviceItem__name">HTML5</h4>
+                  <h4 class="serviceItem__name" id='html5'>HTML5</h4>
                   <!-- <div class="serviceItem__description">Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.</div> -->
                 </div>
 
@@ -307,7 +310,7 @@
 
         <div id="BLOG" class="page">
           <div class="page__header">
-            <h2 class="page__title">BLOG</h2>
+            <h2 class="page__title">GALLERY</h2>
           </div>
 
           <div class="page__content">
@@ -431,6 +434,8 @@
       </footer> -->
     </div>
   </div>
+  <script src="JS/click.js"></script>
+  <script src="JS/jQuery.js"></script>
   <script src="JS/main.js"></script>
   
 </body>
