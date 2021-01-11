@@ -98,7 +98,6 @@ function onscrolling(){
     
     if (scrolled < 2) {
         document.getElementById('page__on-scroll').style.display = 'none';
-        document.getElementById('page__scroll-flash').style.display = 'none';
     }
     if (scrolled > 2) {
         document.getElementById('page__on-scroll').style.display = 'block';
@@ -124,8 +123,12 @@ function onscrolling(){
 
     }
 
+    // 只有第一次会显示动画，如何让每一次>95都能加载一边动画？
     if (scrolled > 95) {
-        document.getElementById('page__on-scroll-to-top').style.display = 'block'; 
+        document.getElementById('page__on-scroll-to-top').style.display = 'block';
+        $('#page__on-scroll-to-top').animate({width:'120px',opacity:'0.5'},1000)
+                                    .animate({height:'100px'},100)
+                                    .animate({color:'white'},1000);
     }
     else{
         document.getElementById('page__on-scroll-to-top').style.display = 'none'; 
@@ -135,6 +138,8 @@ function onscrolling(){
         var width = scrolled/100*290
         document.getElementById('page__scroll-flash').style.display = 'block';
         document.getElementById('page__scroll-flash').style.width = width+'px';
+    }else {
+        document.getElementById('page__scroll-flash').style.display = 'none';
     }
 
     
