@@ -713,5 +713,18 @@ a {
   left: 50%;
   z-index: 100;
 
+  transform: translate(-50%, -80%);
+}
+
+#loading-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+
   transform: translate(-50%, -50%);
+
+  font-size: 3rem;
+  font-weight: 500;
+  color: #4f8fe4;
 }
