@@ -131,7 +131,7 @@ function onscrolling(){
         document.getElementById('page__on-scroll-to-top').style.display = 'none'; 
     }
 
-    if (scrolled > 2) {
+    if (scrolled > 12) {
         var width = scrolled/100*290
         document.getElementById('page__scroll-flash').style.display = 'block';
         document.getElementById('page__scroll-flash').style.width = width+'px';

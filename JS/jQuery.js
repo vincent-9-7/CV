@@ -89,8 +89,13 @@ $(function(){
         })
     }
 
-    function blog_toTheTop() {
-
+    function gallery_hoverButton() {
+        $('#scroll').mouseover(function(){
+            $('#scroll').animate({opacity:'0'},1000)
+        })
+        $('#scroll').mouseout(function(){
+            $('#scroll').animate({opacity:'1'},1000)
+        })
 
     }
 
@@ -99,5 +104,5 @@ $(function(){
     resume_skillFlash();
     skill_listTitle();
     skill_listHover();
-    blog_toTheTop();
+    gallery_hoverButton();
 })
