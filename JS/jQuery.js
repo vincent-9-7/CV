@@ -26,6 +26,7 @@ $(function(){
         })
     }
 
+    //首次加载入home时的动画
     function home_logoFlash() {
         // 使用background-color渐变色记得引用另一个jquery库
         $('.linkedin-background').animate({backgroundColor:'white',opacity:'1'},2000);
@@ -34,21 +35,26 @@ $(function(){
         $(".homepage__name").animate({color:'white'},1000);
         $(".homepage__position").animate({color:'white'},1000);
     }
-    $('.navbar__item[href=HOME]').click(function() {
-        $('.linkedin-background').css({backgroundColor:'#3b5998',opacity:'0.4'});
-        $('.git-background').css({backgroundColor:'black',opacity:'0.4'});
-        $('.linkedin-background').animate({backgroundColor:'white',opacity:'1'},2000);
-        $('.git-background').animate({backgroundColor:'white',opacity:'1'},2000);
-    })
-    $('.navbar__item[href!=HOME]').click(function() {
-        $('.linkedin-background').css({backgroundColor:'#3b5998',opacity:'0.4'});
-        $('.git-background').css({backgroundColor:'black',opacity:'0.4'});
-    })
+
+    //点击home时进行的动画
+    function home_logoFlash_2(){
+        $('.navbar__item[href=HOME]').click(function() {
+            $('.linkedin-background').css({backgroundColor:'#3b5998',opacity:'0.4'});
+            $('.git-background').css({backgroundColor:'black',opacity:'0.4'});
+            $('.linkedin-background').animate({backgroundColor:'white',opacity:'1'},2000);
+            $('.git-background').animate({backgroundColor:'white',opacity:'1'},2000);
+        })
+        $('.navbar__item[href!=HOME]').click(function() {
+            $('.linkedin-background').css({backgroundColor:'#3b5998',opacity:'0.4'});
+            $('.git-background').css({backgroundColor:'black',opacity:'0.4'});
+        })
+    }
+    
     
     
     function resume_skillFlash() {
         $('#resume-page').click(function() {
-            $('.bar').css({width:'0%'});
+            $('.bar').css({width:'0%'})
             $('#web75').animate({width:'85%'},1000)
             $('#graphic80').animate({width:'75%'},1000)
         })
@@ -74,7 +80,6 @@ $(function(){
     $('#skill-page').click(function()  {
         $('#skill-list').animate({opacity:'1'},1000);
         $('.serviceItem__name').animate({opacity:'1'},2000);
-
     })
     }
 
@@ -101,6 +106,7 @@ $(function(){
 
     page_titleFlash();
     home_logoFlash();
+    home_logoFlash_2();
     resume_skillFlash();
     skill_listTitle();
     skill_listHover();
