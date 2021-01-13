@@ -69,7 +69,6 @@ function initialize() {
         }
     }
 
-       
     // 5.用户开始拖拽地图， 添加指针上的信息窗口 
     google.maps.event.addListener(map,'dragstart',function(){
         var contents = "This is my location."
@@ -79,7 +78,6 @@ function initialize() {
         infowindow.open(map,marker2);
         setTimeout(function () { infowindow.close(); }, 4000); //4秒钟后关闭
     });
-
 
 	// n. 运行地图,可以放在html的<script>里
 	// google.maps.event.addDomListener(window, 'load', initialize);
@@ -123,6 +121,14 @@ function onscrolling(){
 
     }
 
+    if (scrolled > 12) {
+        var width = scrolled/100*290
+        document.getElementById('page__scroll-flash').style.display = 'block';
+        document.getElementById('page__scroll-flash').style.width = width+'px';
+    }else {
+        document.getElementById('page__scroll-flash').style.display = 'none';
+    }
+
     // 只有第一次会显示动画，如何让每一次>95都能加载一边动画？
     if (scrolled > 95) {
         document.getElementById('page__on-scroll-to-top').style.display = 'block';
@@ -133,16 +139,6 @@ function onscrolling(){
     else{
         document.getElementById('page__on-scroll-to-top').style.display = 'none'; 
     }
-
-    if (scrolled > 12) {
-        var width = scrolled/100*290
-        document.getElementById('page__scroll-flash').style.display = 'block';
-        document.getElementById('page__scroll-flash').style.width = width+'px';
-    }else {
-        document.getElementById('page__scroll-flash').style.display = 'none';
-    }
-
-    
 }
 
 function tothetop(){
