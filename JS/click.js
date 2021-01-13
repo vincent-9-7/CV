@@ -83,17 +83,18 @@ function initialize() {
 	// google.maps.event.addDomListener(window, 'load', initialize);
 }
 
+// function chooseGallery(){
+//     document.getElementById('scroll').style.display = 'none';
+// }
+
 
 function onscrolling(){
-    var winScroll = document.body.scrollTop || 
-		document.documentElement.scrollTop;
-	var height = document.documentElement.scrollHeight - 
-		document.documentElement.clientHeight;
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     var scrolled = (winScroll / height) * 100;
     
     //获取对象长度： Object.keys(display_none).length
     // var display_block = {1:"ss",2:"aa"}
-    
     if (scrolled < 2) {
         document.getElementById('page__on-scroll').style.display = 'none';
     }
@@ -129,7 +130,7 @@ function onscrolling(){
         document.getElementById('page__scroll-flash').style.display = 'none';
     }
 
-    // 只有第一次会显示动画，如何让每一次>95都能加载一边动画？
+    // 弹出按钮
     if (scrolled > 95) {
         document.getElementById('page__on-scroll-to-top').style.display = 'block';
         $('#page__on-scroll-to-top').animate({width:'120px',opacity:'0.5'},1000)
@@ -138,6 +139,11 @@ function onscrolling(){
     }
     else{
         document.getElementById('page__on-scroll-to-top').style.display = 'none'; 
+    }
+    //恢复弹出按钮到初始化
+    if (scrolled < 95) {
+        document.getElementById('page__on-scroll-to-top').style.display = 'none'; 
+        $('#page__on-scroll-to-top').css({width:'0px',opacity:'0',height:'90px',color:'rgb(58, 183, 255)'})
     }
 }
 

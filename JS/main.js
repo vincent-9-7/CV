@@ -33,7 +33,7 @@ function createNav() {
     var page = document.querySelector('#' + current);
     page.classList.add(className);  
 
-
+    
     // function progressBar() {
     //   // console.log('bar');
     //   var web75 = 1;
